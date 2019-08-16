@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:maxHeight="250dp"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/applovin_native_media_Placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/applovin_native_media_Placeholder">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/applovin_native_appIcon"
+            android:adjustViewBounds="true" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="22dp"
+            android:layout_toEndOf="@id/applovin_native_appIcon"
+            android:layout_marginStart="2dp"
+            android:id="@+id/applovin_native_appRating"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:id="@+id/applovin_native_appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf = "@id/applovin_native_appRating"
+            android:layout_toStartOf="@id/applovin_native_CTABtn"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="1dp"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/applovin_native_appDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/applovin_native_appIcon"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/applovin_native_CTABtn"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="App description"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/applovin_native_CTABtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/native_button_style"
+            android:clickable="true"
+            android:focusable="true"
+            android:enabled="true"
+            android:text="CTA"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

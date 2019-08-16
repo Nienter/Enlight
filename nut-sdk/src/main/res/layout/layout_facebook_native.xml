@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:maxHeight="250dp"
+    android:adjustViewBounds="true"
+    android:background="#e0e0e1"
+    android:orientation="vertical"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp">
+
+    <com.facebook.ads.MediaView
+        android:id="@+id/fb_ad_media"
+        android:layout_width="wrap_content"
+        android:layout_height="198dp"
+        android:gravity="center" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white">
+        <com.facebook.ads.AdIconView
+            android:id="@+id/fb_ad_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center" />
+        <!-- 版本低于 4.99 的所有 SDK，广告标题必须始终展示。
+             版本为 4.99 及以上的 SDK，广告主名称必须始终展示。 -->
+        <TextView
+            android:id="@+id/fb_ad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/fb_ad_icon"
+            android:layout_toStartOf="@id/ad_choices_container"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fb_ad_call_to_action"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/native_button_style"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/fb_ad_sponsored_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/fb_ad_call_to_action"
+            android:layout_alignTop="@id/fb_ad_call_to_action"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:id="@+id/ad_choices_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/fb_ad_sponsored_label"
+            android:layout_alignTop="@id/fb_ad_sponsored_label"/>
+
+        <TextView
+            android:id="@+id/fb_ad_social_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/fb_ad_call_to_action"
+            android:layout_alignBottom="@id/fb_ad_call_to_action"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/fb_ad_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/fb_ad_icon"
+            android:layout_toStartOf="@id/fb_ad_call_to_action"
+            android:layout_below="@id/fb_ad_name"
+            android:layout_marginEnd="2dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@android:color/black"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>
